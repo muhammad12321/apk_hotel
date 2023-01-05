@@ -124,7 +124,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="<?php echo base_url();?>aset/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url();?>aset/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url();?>aset/dist/js/demo.js"></script>
 </body>
 </html>
