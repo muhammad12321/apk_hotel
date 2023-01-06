@@ -10,6 +10,13 @@ class M_pesanan extends CI_Model{
         $this->db->from('pesanan');
         return $this->db->get();
     }
+    public function get_keyword($keyword){
+        $this->db->select('*');
+        $this->db->from('pesanan');
+        $this->db->like('nama_tamu', $keyword);
+        $this->db->or_like('tgl_cek_in', $keyword);
+        return $this->db->get()->result();
+    }
     public function detail_data($id_pemesan)
     {
         $this->db->select('

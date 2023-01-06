@@ -10,6 +10,11 @@ class Pesanan extends CI_Controller {
         $data['pesanan'] = $this->m_pesanan->tampil_data()->result();
         $this->load->view('Resepsionis/pesanan', $data);
     }
+    public function search(){
+        $keyword = $this->input->post('keyword');
+        $data['pesanan']=$this->m_pesanan->get_keyword($keyword);
+        $this->load->view('Resepsionis/pesanan',$data);
+    }
     public function detail($id_pemesan)
     {
         $this->load->model('m_pesanan');
